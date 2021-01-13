@@ -88,4 +88,4 @@ setButtonColour(buttons[0], 0, 0, 255);
 
 Now watch your button change colour! Since you're working offline, you need to reload the page in your browser to see the change.
 
-![The first button has changed from red to blue. The other five buttons remain red.](images/1blue.png)
+![../The first button has changed from red to blue. The other five buttons remain red.](images/1blue.png)
