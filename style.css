@@ -1,4 +1,4 @@
-.colourButton{
+.colorButton{
     background-color: rgb(255,0,0);
     width: 60px;
     height: 60px;
@@ -20,7 +20,7 @@ h1{
     text-align: center;
 }
 
-#colourValue{
+#colorValue{
     margin: 0 auto;
     text-align: center;
 }
