@@ -7,6 +7,9 @@
     box-shadow: none;
     margin: 10px;
 }
+.colorButton:hover { 
+  border: rgb(0, 255, 42) 5px solid;
+}
 
 #buttonWrapper{
     width: 700px;
