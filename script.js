@@ -6,7 +6,9 @@ heading = document.getElementById('colorValue');
 
 var answerMessage = document.getElementById('answer');
 
-var background = document.getElementsByTagName('body');
+var x = document.getElementsByTagName('body');
+
+var rgb = "";
 
 
 function startGame () {
@@ -27,12 +29,16 @@ var blue = makeColorValue();
 
 
   if (i === answerButton) {
-    heading.innerHTML = `(${red}, ${green}, ${blue})`;
+    rgb =`(${red}, ${green}, ${blue})`;
+     heading.innerHTML = `(${red}, ${green}, ${blue})`;
   }
 
     buttons[i].addEventListener('click', function() {
       if (this === buttons[answerButton]) {
         answerMessage.innerHTML = "Correct!";
+
+       x.setAttribute("style", "background-color: red;");
+
       } else {
         answerMessage.innerHTML = "Wrong Answer! Guess  Again!";
 
