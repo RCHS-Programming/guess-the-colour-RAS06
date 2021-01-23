@@ -6,12 +6,13 @@ heading = document.getElementById('colorValue');
 
 var answerMessage = document.getElementById('answer');
 
-var x = document.getElementsByTagName('body');
-
-var rgb = "";
-
+var storeR = "";
+var storeG = "";
+var storeB = "";
 
 function startGame () {
+
+
 
   answerMessage.innerHTML = "";
 
@@ -30,17 +31,27 @@ var blue = makeColorValue();
 
   if (i === answerButton) {
     rgb =`(${red}, ${green}, ${blue})`;
-     heading.innerHTML = `(${red}, ${green}, ${blue})`;
+		storeR = red;
+		storeG = green;
+		storeB = blue;
+    heading.innerHTML = `(${red}, ${green}, ${blue})`;
   }
 
     buttons[i].addEventListener('click', function() {
       if (this === buttons[answerButton]) {
         answerMessage.innerHTML = "Correct!";
+						
+	// This! Do the thing here! Don't forget. 
+				
+		document.body.style.background = 'rgb(' + storeR + ',' + storeG + ',' + storeB + ')';
 
-       x.setAttribute("style", "background-color: red;");
+
 
       } else {
         answerMessage.innerHTML = "Wrong Answer! Guess  Again!";
+				
+				document.body.style.background = 'white';
+
 
       }
     });
@@ -55,13 +66,11 @@ function setButtonColor(button, red, green, blue) {
 }
 
 
+
 function makeColorValue () {
   return Math.round(Math.random()*255);
 }
 
-function setBackgroundColor(background) {
-  
-}
 
 startGame();
 
